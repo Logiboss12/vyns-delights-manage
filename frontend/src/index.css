@@ -413,12 +413,18 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; }
 .auth-card__subtitle { color: #888; text-align: center; margin: 0 0 1.6rem; font-size: .95rem; }
 .auth-field { display: flex; flex-direction: column; gap: .35rem; margin-bottom: 1rem; }
 .auth-field > span { font-size: .88rem; font-weight: 600; color: var(--vyns-navy); }
-.auth-field .p-inputtext, .auth-field .p-password { width: 100%; }
+
+.auth-field .p-inputtext { width: 100%; }
+.auth-field .p-password { display: flex; flex-direction: column; gap: .35rem; margin-bottom: 1rem; }
+.auth-field .p-password > .p-inputtext,
+.auth-field .p-password > input { width: 100% !important; flex: 1 1 auto !important; }
 .auth-row { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
 .auth-submit { width: 100%; margin-top: .6rem; }
 .auth-switch { text-align: center; margin: 1.2rem 0 0; font-size: .92rem; color: #666; }
 .auth-switch a { color: var(--vyns-terracotta); font-weight: 600; text-decoration: none; }
 .auth-switch a:hover { text-decoration: underline; }
+
+
 
 /* En-tête connecté */
 .vyns-nav__hello { color: var(--vyns-navy); font-weight: 600; }

@@ -4,25 +4,24 @@ import { Button } from 'primereact/button';
 
 const SLIDES = [
   {
-    image: 'https://loremflickr.com/1280/600/african,food?lock=201',
+    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1280&h=600&fit=crop',
     title: 'Vos plats préférés, livrés à Bertoua',
     subtitle: "La cuisine maison de VYN'S DELIGHTS, fraîche et savoureuse.",
     cta: 'Voir le catalogue', to: '/catalogue',
   },
   {
-    image: 'https://loremflickr.com/1280/600/grilled,fish?lock=202',
+    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1280&h=600&fit=crop',
     title: 'Des saveurs authentiques',
     subtitle: 'Poulet DG, Ndolè, poisson braisé… vos classiques préparés avec soin.',
     cta: 'Commander maintenant', to: '/catalogue',
   },
   {
-    image: 'https://loremflickr.com/1280/600/juice,drink?lock=203',
-    title: 'Fraîcheur garantie',
-    subtitle: 'Jus naturels et desserts faits maison, livrés chez vous.',
+    image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=1280&h=600&fit=crop',
+    title: 'Douceurs & pâtisseries maison',
+    subtitle: 'Gâteaux, entremets et jus naturels préparés avec passion.',
     cta: 'Découvrir', to: '/catalogue',
   },
 ];
-
 export default function HeroSlider() {
   const [index, setIndex] = useState(0);
   const next = useCallback(() => setIndex((i) => (i + 1) % SLIDES.length), []);

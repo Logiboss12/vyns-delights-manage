@@ -4,6 +4,7 @@ import { ProgressSpinner } from 'primereact/progressspinner';
 import api from '../services/api';
 import ProductCard from '../components/products/ProductCard';
 import CategoryFilter from '../components/products/CategoryFilter';
+import { useSearchParams } from 'react-router-dom';
 
 export default function CataloguePage() {
   const [tree, setTree] = useState([]);
@@ -14,6 +15,27 @@ export default function CataloguePage() {
   const [chargement, setChargement] = useState(true);
   const [erreur, setErreur] = useState(null);
 
+
+  const [searchParams] = useSearchParams();
+
+  
+  useEffect(() => {
+    if (tree.length === 0) return;
+    const nomCat = searchParams.get('cat');       
+    const nomUnivers = searchParams.get('univers'); 
+
+    if (nomCat) {
+      
+      for (const u of tree) {
+        const found = u.children.find((c) => c.name === nomCat);
+        if (found) { setActiveId(found.id); return; }
+      }
+    } else if (nomUnivers) {
+      
+      const u = tree.find((x) => x.name === nomUnivers);
+      if (u && u.children.length) setActiveId(u.children[0].id);
+    }
+  }, [tree, searchParams]);
   
   useEffect(() => {
     api.get('/category-tree')

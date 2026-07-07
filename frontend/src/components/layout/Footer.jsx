@@ -44,14 +44,15 @@ export default function Footer() {
         </div>
 
         {/* Colonne 3 — Nos services */}
+        {/* Colonne 3 — Nos services */}
         <div className="vyns-footer__col">
           <h4 className="vyns-footer__title">Nos services</h4>
           <ul className="vyns-footer__links">
-            <li><Link to="/catalogue">Pâtisserie</Link></li>
-            <li><Link to="/catalogue">Cuisine & traiteur</Link></li>
-            <li><Link to="/catalogue">Anniversaires</Link></li>
-            <li><Link to="/catalogue">Mariages</Link></li>
-            <li><Link to="/catalogue">Commandes spéciales</Link></li>
+            <li><Link to="/catalogue?univers=Pâtisserie">Pâtisserie</Link></li>
+            <li><Link to="/catalogue?univers=Cuisine">Cuisine & traiteur</Link></li>
+            <li><Link to="/catalogue?cat=Gâteaux événementiels">Gâteaux événementiels</Link></li>
+            <li><Link to="/catalogue?cat=Viennoiseries">Viennoiseries</Link></li>
+            <li><Link to="/catalogue">Tout le catalogue</Link></li>
           </ul>
         </div>
 
