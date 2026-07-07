@@ -1,0 +1,31 @@
+/*  À propos  */
+.about { background: #fff; padding: 4rem 2rem; }
+.about__inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.about__eyebrow { display: inline-block; color: var(--vyns-terracotta); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: .82rem; margin-bottom: .6rem; }
+.about__title { color: var(--vyns-navy); font-size: 2rem; line-height: 1.2; margin: 0 0 1.2rem; }
+.about__text { color: #555; line-height: 1.8; margin: 0 0 1rem; }
+.about__text strong { color: var(--vyns-navy); }
+
+/* Deux pôles */
+.about__duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.about__pole { border-radius: 16px; padding: 1.6rem; color: #fff; text-align: center; }
+.about__pole i { font-size: 1.8rem; margin-bottom: .5rem; display: block; }
+.about__pole h3 { margin: 0 0 .4rem; font-size: 1.2rem; }
+.about__pole p { margin: 0; font-size: .9rem; opacity: .95; line-height: 1.5; }
+.about__pole--patisserie { background: linear-gradient(135deg, var(--vyns-terracotta), #9a4e20); }
+.about__pole--cuisine { background: linear-gradient(135deg, var(--vyns-navy), #16294a); }
+
+/* Services événementiels */
+.about__services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.about-service { display: flex; gap: .8rem; align-items: flex-start; background: var(--vyns-cream); border-radius: 12px; padding: 1rem; }
+.about-service i { color: var(--vyns-terracotta); font-size: 1.3rem; margin-top: .15rem; }
+.about-service h4 { margin: 0 0 .25rem; color: var(--vyns-navy); font-size: 1rem; }
+.about-service p { margin: 0; color: #666; font-size: .85rem; line-height: 1.45; }
+
+@media (max-width: 860px) {
+  .about__inner { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media (max-width: 520px) {
+  .about__duo, .about__services-grid { grid-template-columns: 1fr; }
+  .about__title { font-size: 1.6rem; }
+}

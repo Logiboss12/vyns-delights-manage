@@ -1,0 +1,8 @@
+{
+    "name": "Test Client",
+    "email": "client@test.com",
+    "password": "motdepasse123",
+    "password_confirmation": "motdepasse123",
+    "phone": "690000000",
+    "address": "Bertoua"
+}

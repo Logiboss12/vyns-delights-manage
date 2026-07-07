@@ -1,0 +1,12 @@
+{
+  "name": "tests-e2e",
+  "version": "1.0.0",
+  "main": "premier-test.js",
+  "scripts": {
+    "test": "mocha *.js --timeout 30000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
